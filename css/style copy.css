@@ -1,0 +1,87 @@
+
+/*メイン構成 */
+
+.main{
+display: flex;                    /*メイン配列*/
+flex-direction: column;           /*配列方向縦*/
+align-items: center;              /*各項目を中心に合わせる*/
+gap: 100px;                       /*各刻目のギャップ大きさ*/
+}
+
+body {
+background-color: blue;
+}
+
+.title {
+  text-align: center;              /*タイトルの文字配置*/
+  font-size: 5vw;                  /*横幅の5％が文字サイズ*/
+
+/*未適用    */
+  font-family: "Nikukyu", sans-serif !important;
+
+}
+
+/*キャラクターリスト */
+.character-list {
+display: flex;            /*配列方向横に設定*/
+text-align: center;       /*テキスト配列設定*/
+padding: auto;            /*テキスト配列設定*/
+}
+
+.character-list li {
+flex: 1;         /*   すべての項目の幅を均等にする */
+padding:0 20px;
+}
+
+.character-list img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/*   堀の外 */
+.firewallout {
+
+  display: flex;
+}
+
+
+/*   第1関門 ファイアウォール */
+.forgate1 h2 {
+  text-align: center;            /*タイトルを中心に設定*/
+}
+
+.forgate1 ul {
+  flex:1;
+  display: flex;
+}
+
+
+/*   第2関門 超高感度センサーIDS/IPS */
+.forgate2 {
+  text-align: center;
+  background-color: aqua;
+  padding: 0;
+  margin: 0;
+}
+.forgate2 img {
+
+  width: 100vw;
+}
+
+/*   第3関門 多要素認証・暗号化（開かずの扉） */
+.forgate3 {
+text-align: center;
+
+}
+.forgate3 img {
+  width: 100vw;
+}
+
+/*   第4関門 ハニーポット（偽のおとり） */
+.forgate4 {
+text-align: center;
+}
+
+
+

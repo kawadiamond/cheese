@@ -1,0 +1,305 @@
+
+/*メイン構成 */
+.section {
+  /*background-color: #f2f2f2;  */     /* 統一したグレー背景 */
+  padding: 60px 20px;              /* セクション内余白 */
+  /*margin-bottom: 2000px 10vw;  */           /* セクション間余白 */
+
+}
+.main {
+display: flex;                    /*メイン配列*/
+flex-direction: column;           /*配列方向縦*/
+align-items: center;              /*各項目を中心に合わせる*/
+gap: 1000px;                      /*各項目間　距離*/
+background-color: aliceblue;
+}
+
+body {
+background-color: rgb(114, 188, 223);
+}
+
+.title {
+  text-align: center;              /*タイトルの文字配置*/
+  font-size: 5vw;                  /*横幅の5％が文字サイズ*/
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0 0 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+  background-color: blanchedalmond;
+/* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    /* 画面の幅100%にする */
+  margin-left: calc(50% - 50vw);   /* 画面の中心を基準に左右いっぱいに広げる */
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;          /* paddingでレイアウトが崩れるのを防ぐ */
+
+/*未適用    */
+  font-family: "nikukyu", sans-serif !important;
+
+}
+
+/*キャラクターリスト */
+.character-list {
+  background-color: blanchedalmond;
+  padding: 60px 80px;                    /* セクションサイズの上 下の空間 */
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+  margin-bottom: 100px;
+}
+
+.character-list h2 {
+  text-align: center;
+  font-size: 5vw;
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+    /* 左上 右上 右下 左下 の順番 */
+  border-radius: 100px 100px 100px 100px; 
+  /*左、右　余白 */
+  margin-left: 25vw;
+  margin-right: 25vw;
+  padding: 1vw;
+}
+.character-list ul {
+display: flex;            /*配列方向横に設定*/
+text-align: center;       /*テキスト配列設定*/
+font-size: 5vw;
+}
+
+.character-list li {
+flex: 1;         /*   すべての項目の幅を均等にする */
+padding:0 20px;
+}
+
+.character-list img {
+width: 100%;                     /*画像サイズ幅 */
+height: 85%;                    /*画家高さ   */
+object-fit: cover;
+}
+
+.start {
+  background-color:blanchedalmond;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  font-family: fantasy;
+  font-size: 5vw;
+  text-align: center;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+  
+  /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;          
+  
+  /* ▼ 横一線の「帯」にするための上下の厚み（余白） ▼ */
+  padding: 60px 0;                 
+}
+.start h2 {
+    animation: blinking 0.5s infinite;
+}
+
+/* 点滅アニメーションの定義 */
+@keyframes blinking {
+  10%   { opacity: 0; }
+  70% { opacity: 1; }
+}
+
+
+/*   堀の外 */
+.firewallout {
+  /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+
+}
+
+.firewallout h2 {
+  text-align: center;
+  font-size: clamp(3vw, 5vw, 20%);
+  white-space: nowrap;        /* 改行させない */
+  background-color: blanchedalmond;
+}
+.firewallout ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;    /* ▼ 水平方向（横）の真ん中に配置 ▼ */
+
+}
+
+
+/*  緊急事態発生 */
+
+.emergency {
+      /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+
+}
+.emergency h2 {
+    animation: blinking 0.5s infinite;
+    font-size: 5vw;
+    color: red;
+    text-align: center;
+}
+
+/* 点滅アニメーションの定義 */
+@keyframes blinking {
+  10%   { opacity: 0; }
+  70% { opacity: 1; }
+}
+
+
+/*   第1関門 ファイアウォール */
+
+.forgate1 {
+      /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+
+
+}
+.forgate1 h2 {
+  text-align: center;            /* タイトルを中心に設定 */
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+
+}
+
+.forgate1 ul {
+  display: flex;            /* 画像を横並びにする */
+  list-style: none;         /* リストの黒点を消す */
+  padding: 0;               /* 余白をリセット */
+  justify-content: center;  /* 中央に寄せる */
+
+}
+
+.forgate1 li {
+  flex: 1;                  /* すべての項目の幅を均等にする */
+  padding: 0 0%;          /* 左右の余白 */
+}
+
+.forgate1 img {
+  width: 100%;              /* 幅を親要素いっぱいにする */
+  height: 210%;            /* 高さを固定して綺麗に揃える（お好みで変更可能） */
+  object-fit: cover;        /* 画像の比率を保ったまま枠に合わせる */
+}
+/* 以前の巨大な固定マージンは削除し、親の gap に任せるため 0 にする */
+.forgate1 div:last-child h2 {
+  margin-top: 25%;
+  color: red;
+  animation: blinking 0.5s infinite;
+}
+
+/*   第2関門 超高感度センサーIDS/IPS */
+.forgate2 {
+  text-align: center;
+ /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+.forgate2 img {
+  height: auto;
+  width: 100vw;
+}
+
+.forgate2 div:last-child h2 {
+  color: red;
+  animation: blinking 0.5s infinite;
+}
+
+/*   第3関門 多要素認証・暗号化（開かずの扉） */
+.forgate3 {
+text-align: center;
+ /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+.forgate3 img {
+  width: 100vw;
+}
+
+.forgate3 div:last-child h2 {
+  color: red;
+  animation: blinking 0.5s infinite;
+}
+
+/*   第4関門 ハニーポット（偽のおとり） */
+.forgate4 {
+text-align: center;
+ /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.forgate4 img {
+  width: 100vw;
+}
+.forgate4 div:last-child h2 {
+   
+  color:rgb(45, 45, 45);
+  animation: blinking 0.5s infinite;
+}
+
+/*   GoooL */
+
+.goal {
+text-align: center;
+text-transform: capitalize;
+font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+ /* ▼ 画面の横方向いっぱいに広げる設定 ▼ */
+  width: 100vw;                    
+  margin-left: calc(50% - 50vw);   
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;   
+  background-color: blanchedalmond;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+
+}
+/* 点滅アニメーションの動きを定義 */
+@keyframes blinking {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.goal h2 a {
+  color: rgb(45, 45, 45);
+  animation: blinking 0.5s infinite;
+}
